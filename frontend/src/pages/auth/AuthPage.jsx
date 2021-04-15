@@ -27,14 +27,15 @@ export default function LoginPage() {
         <div className="wrapper">
             <div className="container">
                 <div className="row mt-4">
-                    <div className="col-md-6 ">
+                    <div className="col-md-6 mb-4">
                         <div className="card">
                             <img className="card-img-top" src={logo} alt="Plantista logo" title="Plantista logo"/>
                             <div className="card-body">
-                                <h4 className="card-title">Plant lovers unite!</h4>
-                                <p className="card-text">Whether you're a seasoned plant parent or a nervous newbie, Plantista is the forum
-                                    for you!</p>
+                                <h1 className="card-title">Plant lovers unite!</h1>
+                                <p className="card-text">Whether you're a seasoned plant parent or a nervous newbie,
+                                    Plantista is the forum for you!</p>
                                 <p>Post your best green-fingered tips or seek help for your floral conundrums.</p>
+                                <p>Sign up or log in to get started.</p>
                             </div>
                         </div>
                     </div>
