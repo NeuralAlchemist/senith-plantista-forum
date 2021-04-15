@@ -10,12 +10,12 @@ This project is a Full Stack Application created, tested and implemented by the 
 
 - [Description](https://github.com/NeuralAlchemist/senith-plantista-forum#description)
 - [Getting started](https://github.com/NeuralAlchemist/senith-plantista-forum#getting-started)
-- [Instructions for the starter template and dependencies](https://github.com/NeuralAlchemist/senith-plantista-forum#sda-starter-template)
+- [Instructions for the starter template and dependencies](https://github.com/NeuralAlchemist/senith-plantista-forum#instructions-for-the-starter-template-and-dependencies)
 - [Credits](https://github.com/NeuralAlchemist/senith-plantista-forum#credits)
 
-## Description
+## Functionality
 
-The following functionalities of the online forum are:
+The functionalities of the online forum are:
 - Make a post
 - Delete a post
 - View all posts
@@ -23,15 +23,14 @@ The following functionalities of the online forum are:
 - Delete a comment on a post
 - View all comments on a post
 
-
 ## Getting started
 
 ### For you looking for running the app
-1. Clone the repo
+1. Clone the repo using `git clone https://github.com/NeuralAlchemist/senith-plantista-forum.git`
 2. Open the project in your preferred IDE/Text editor
-3. Follow the instructions on the "Starting the database"
-4. Follow the instructions on the "Starting the frontend development server"
-5. Open your browser and navigate to "http://localhost:3000"
+3. Follow the instructions on [starting the database](https://github.com/NeuralAlchemist/senith-plantista-forum#starting-the-database)
+4. Follow the instructions on [starting the frontend development server](https://github.com/NeuralAlchemist/senith-plantista-forum#starting-the-frontend-development-server)
+5. Open your browser and navigate to http://localhost:3000
 6. Have fun! :)
 
 ### For you looking to implement this in your team
@@ -42,8 +41,6 @@ The following functionalities of the online forum are:
 ### Q&A and issue tracking
 
 If you have any questions, feedback, or feature requests, don't hesitate to add an issue to the GitHub repo.
-
-
 
 # Instructions for the starter template and dependencies
 
