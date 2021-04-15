@@ -4,7 +4,7 @@ Last updated: 15-April-2021
 Plant lovers unite! Whether you’re a seasoned plant parent or a nervous newbie, Plantista is the online forum for you!
 Post your best green-fingered tips or seek help for your floral conundrums.
 
-This project is a Full Stack Application created, tested and implemented by the following SDA members: En-Chi Liu, Diana Bao, Pei-Nen Chee, Qinyu Jia and Yashaswini Rao Seeta. The project's main purpose is to serve as a real-life practice of working in a collaborating environment. Please feel free to use this repo if you wish to implement it in your team.
+This project is a Full Stack Application created, tested and implemented by the following SDA members: En-Chi Liu, Diana Bao, Pei-Nen Chee, Qinyu Jia and Yashaswini Seeta. The project's main purpose is to serve as a real-life practice of working in a collaborating environment. Please feel free to use this repo if you wish to implement it in your team.
 
 ## Contents
 
@@ -31,7 +31,7 @@ The following functionalities of the online forum are:
 2. Open the project in your preferred IDE/Text editor
 3. Follow the instructions on the "Starting the database"
 4. Follow the instructions on the "Starting the frontend development server"
-5. Open your browser and navigate to "htpps://localhost:5431/skeleton"
+5. Open your browser and navigate to "http://localhost:3000"
 6. Have fun! :)
 
 ### For you looking to implement this in your team
