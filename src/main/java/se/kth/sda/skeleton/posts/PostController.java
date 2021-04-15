@@ -2,13 +2,11 @@ package se.kth.sda.skeleton.posts;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import se.kth.sda.skeleton.posts.Post;
-import se.kth.sda.skeleton.posts.PostService;
 
 import java.util.List;
 
 @RestController
-public class PostController {
+public class PostController{
     private final PostService postService;
 
     @Autowired
