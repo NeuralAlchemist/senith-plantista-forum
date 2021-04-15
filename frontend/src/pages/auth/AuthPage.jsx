@@ -5,6 +5,7 @@ import React from "react";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import Auth from "../../services/Auth";
+import logo from "../../images/logo.png";
 
 export default function LoginPage() {
   // Methods
@@ -27,9 +28,8 @@ export default function LoginPage() {
       <div className="container">
         <div className="row mt-4">
           <div className="col-md-6 " style={{ color: "white" }}>
-            <h1>SDA</h1>
-            <p>Starter template</p>
-          </div>
+            <img src={logo} alt="Plantista logo" title="Plantista logo"/>
+              </div>
 
           <div className="col-md-6">
             <div className="row">
