@@ -3,9 +3,15 @@ body {
     color: #3A3042;
 }
 
+/* Navigation */
+
 .navbar {
     background: #55A44E !important;
 
+}
+
+.navbar-toggler {
+    background-color: #EDE9A3;
 }
 
 .navbar a {
@@ -16,18 +22,17 @@ body {
     color:  #FFFFFF !important;
 }
 
+/* Links */
+
 a {
-    color:  #42803C !important;
-    text-decoration: underline;
+    color:  #42803C;
 }
 
 a:hover {
     color:  #55A44E;
 }
 
-.navbar-toggler {
-    background-color: #EDE9A3;
-}
+/* Buttons */
 
 .btn-outline-info {
     border-color: #EDE9A3;

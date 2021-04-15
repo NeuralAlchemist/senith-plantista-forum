@@ -25,7 +25,7 @@ export default function PostForm({ onSubmit }) {
           </div>
 
           <div className="form-group">
-            <button className="btn btn-primary" onClick={handleSubmit}>
+            <button className="btn btn-success" onClick={handleSubmit}>
               Post
             </button>
           </div>
