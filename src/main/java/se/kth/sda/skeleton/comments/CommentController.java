@@ -1,6 +1,7 @@
 package se.kth.sda.skeleton.comments;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import se.kth.sda.skeleton.ResourceNotFoundException;
@@ -31,10 +32,10 @@ public class CommentController{
 
     // Delete the given comment
     @DeleteMapping("/comments/{id}")
-    public ResponseEntity<Comment> deleteComment(@PathVariable Long id){
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteComment(@PathVariable Long id){
         Comment commentToBeDeleted = commentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
         commentRepository.delete(commentToBeDeleted);
-        return ResponseEntity.ok(commentToBeDeleted);
     }
 
     // Update a given comment
