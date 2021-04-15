@@ -1,0 +1,41 @@
+body {
+    background: #EDE9A3;
+    color: #3A3042;
+}
+
+.navbar {
+    background: #55A44E !important;
+
+}
+
+.navbar a {
+    color:  #EDE9A3 !important;
+}
+
+.navbar a:hover {
+    color:  #FFFFFF !important;
+}
+
+a {
+    color:  #42803C !important;
+    text-decoration: underline;
+}
+
+a:hover {
+    color:  #55A44E;
+}
+
+.navbar-toggler {
+    background-color: #EDE9A3;
+}
+
+.btn-outline-info {
+    border-color: #EDE9A3;
+    color:  #EDE9A3;
+}
+
+.btn-outline-info:hover {
+    border-color: #55A44E;
+    color:  #55A44E;
+    background-color: #EDE9A3;
+}

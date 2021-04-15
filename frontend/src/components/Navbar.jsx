@@ -4,7 +4,7 @@ import logo from "../images/logo-text.png"
 
 export default function Navbar({ onLogout }) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
       <Link className="navbar-brand" to="/">
         <img src={logo} alt="Plantista logo" title="Plantista logo" />
       </Link>
