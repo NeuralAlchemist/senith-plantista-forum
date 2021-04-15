@@ -3,46 +3,50 @@ package se.kth.sda.skeleton.posts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import se.kth.sda.skeleton.ResourceNotFoundException;
+import se.kth.sda.skeleton.posts.Post;
+import se.kth.sda.skeleton.posts.PostRepository;
 
 import java.util.List;
-import java.util.Optional;
 
-/*
-    @TODO Implement service methods.
- */
 @Service
 public class PostService {
 
-    private final PostRepository articleRepository;
+    private final PostRepository postRepository;
 
     @Autowired
-    public PostService(PostRepository articleRepository) {
-        this.articleRepository = articleRepository;
+    public PostService(PostRepository postRepository) {
+        this.postRepository = postRepository;
     }
 
     public List<Post> findAllPosts() {
-        return articleRepository.findAll();
+        return postRepository.findAll();
     }
 
     public Post findPostById(long id) {
-        return articleRepository.findById(id)
+        return postRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException(id));
     }
 
-    public Post addPost(Post article) {
-        return articleRepository.save(article);
+    public Post addPost(Post post) {
+        return postRepository.save(post);
     }
 
     public Post updatePost(Post newPost, long id) {
-        Post article = findPostById(id);
+        Post post = findPostById(id);
+        if (newPost.getTitle() != null) {
+            post.setTitle(newPost.getTitle());
+        }
         if (newPost.getBody() != null) {
-            article.setBody(newPost.getBody());
-
-        return articleRepository.save(article);
+            post.setBody(newPost.getBody());
+        }
+        if (newPost.getAuthorName() != null) {
+            post.setAuthorName(newPost.getAuthorName());
+        }
+        return postRepository.save(post);
     }
 
     public void deletePost(long id) {
-        articleRepository.deleteById(id);
+        postRepository.deleteById(id);
     }
 }
 
