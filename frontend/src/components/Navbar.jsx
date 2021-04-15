@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../images/logo-text.png"
 
 export default function Navbar({ onLogout }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <Link className="navbar-brand" to="/">
-        SDA starter
+        <img src={logo} alt="Plantista logo" title="Plantista logo" />
       </Link>
       <button
         className="navbar-toggler"
