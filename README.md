@@ -8,10 +8,10 @@ This project is a Full Stack Application created, tested and implemented by the 
 
 ## Contents
 
-- [Description](link)
-- [Getting started](link)
-- [Instructions for the starter template and dependencies](link)
-- [Credits](link)
+- [Description](https://github.com/NeuralAlchemist/senith-plantista-forum#description)
+- [Getting started](https://github.com/NeuralAlchemist/senith-plantista-forum#getting-started)
+- [Instructions for the starter template and dependencies](https://github.com/NeuralAlchemist/senith-plantista-forum#sda-starter-template)
+- [Credits](https://github.com/NeuralAlchemist/senith-plantista-forum#credits)
 
 ## Description
 
