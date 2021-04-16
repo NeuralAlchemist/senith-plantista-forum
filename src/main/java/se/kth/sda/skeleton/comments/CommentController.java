@@ -8,6 +8,7 @@ import se.kth.sda.skeleton.ResourceNotFoundException;
 import se.kth.sda.skeleton.posts.PostRepository;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 public class CommentController{
@@ -19,7 +20,11 @@ public class CommentController{
     }
 
     // Return all comments of a post
-
+    @GetMapping("/posts/{postId}/comments")
+    public ResponseEntity<List<Comment>> getAllComments(@PathVariable Long postId){
+        List<Comment> allComments = commentService.getAllComments(postId);
+        return ResponseEntity.ok(allComments);
+    }
     // Create a comment for a given post
     @PostMapping("/posts/{postId}/comments")
     public ResponseEntity<Comment> createComment(@PathVariable Long postId,@RequestBody Comment comment){
