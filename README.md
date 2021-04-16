@@ -4,18 +4,30 @@ Last updated: 15-April-2021
 Plant lovers unite! Whether you’re a seasoned plant parent or a nervous newbie, Plantista is the online forum for you!
 Post your best green-fingered tips or seek help for your floral conundrums.
 
-This project is a Full Stack Application created, tested and implemented by the following SDA members: En-Chi Liu, Diana Bao, Pei-Nen Chee, Qinyu Jia and Yashaswini Seeta. The project's main purpose is to serve as a real-life practice of working in a collaborating environment. Please feel free to use this repo if you wish to implement it in your team.
+This project is a Full Stack Application created, tested and implemented by the following SDA members: En-Chi Liu, Diana Bao, Pei-Nen Chee, Qinyu Jia and Yashaswini Seeta  
+
+The project's main purpose is to serve as a real-life practice of working in a collaborating environment. The [starter template repo](https://github.com/softwaredevacademy/be-mini-group-project) was provided by Software Development Academy.
 
 ## Contents
 
+- [Technologies](https://github.com/NeuralAlchemist/senith-plantista-forum#technologies)
 - [Description](https://github.com/NeuralAlchemist/senith-plantista-forum#description)
 - [Getting started](https://github.com/NeuralAlchemist/senith-plantista-forum#getting-started)
-- [Instructions for the starter template and dependencies](https://github.com/NeuralAlchemist/senith-plantista-forum#sda-starter-template)
+- [Setup for developers](https://github.com/NeuralAlchemist/senith-plantista-forum#setup-for-developers)
 - [Credits](https://github.com/NeuralAlchemist/senith-plantista-forum#credits)
+
+## Technologies
+
+- [Spring 2.2.0.RELEASE](https://spring.io/projects/spring-boot)
+- [PostgreSQL 13-alpine](https://www.postgresql.org)
+- [React 16.11.0](https://reactjs.org)
+- [React Router 5.1.2](https://reacttraining.com/react-router/web/guides/quick-start)
+- [Axios 0.19.0](https://github.com/axios/axios)
+- [Bootstrap 4.3.1](https://getbootstrap.com/)
 
 ## Description
 
-The following functionalities of the online forum are:
+The functionalities of the online forum are:
 - Make a post
 - Delete a post
 - View all posts
@@ -23,37 +35,21 @@ The following functionalities of the online forum are:
 - Delete a comment on a post
 - View all comments on a post
 
-
 ## Getting started
 
-### For you looking for running the app
-1. Clone the repo
+### Running the app
+1. Clone the repo using `git clone https://github.com/NeuralAlchemist/senith-plantista-forum.git`
 2. Open the project in your preferred IDE/Text editor
-3. Follow the instructions on the "Starting the database"
-4. Follow the instructions on the "Starting the frontend development server"
-5. Open your browser and navigate to "http://localhost:3000"
+3. Follow the instructions on [starting the database](https://github.com/NeuralAlchemist/senith-plantista-forum#starting-the-database)
+4. Follow the instructions on [starting the frontend development server](https://github.com/NeuralAlchemist/senith-plantista-forum#starting-the-frontend-development-server)
+5. Open your browser and navigate to http://localhost:3000
 6. Have fun! :)
-
-### For you looking to implement this in your team
-1. Clone the repo
-2. You'll find the instructions in the "SDA starter template and dependencies below"
-3. Make sure you make the necessary edit/changes before using the code
 
 ### Q&A and issue tracking
 
 If you have any questions, feedback, or feature requests, don't hesitate to add an issue to the GitHub repo.
 
 
-
-# Instructions for the starter template and dependencies
-
-This web starter template is based on Spring, PostgreSQL, React, React router and Axios. Check the following links for documentation and guides:
-
-- [Spring](https://spring.io/projects/spring-boot)
-- [PostgreSQL](https://www.postgresql.org)
-- [React](https://reactjs.org)
-- [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
-- [Axios](https://github.com/axios/axios)
 
 ## Setup for developers
 Our development environment for a full-stack web application will consist of three main parts:
@@ -90,17 +86,10 @@ Then start the frontend application by running
 npm start
 ```
 
-### Inviting collaborators
-The following should be done by one person in each group.
-
-Now that you have a repo, you can start inviting your group members as collaborators so that they can work
-with you on your repo. Go to `Settings` -> `Manage Access` and then add your group members via their usernames.
-
-### Task instructions
-You will find your task instructions in [`Task.md`](Task.md)
 
 ## Credits
 
 - Many thanks to all the amazing work from the core team!
-- KTH University staff
-- Novare
+- KTH Software Development Academy staff
+- Novare Potential
+- Logo via [Hatchful](https://hatchful.shopify.com/)
