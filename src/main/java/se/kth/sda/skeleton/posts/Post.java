@@ -1,9 +1,9 @@
 package se.kth.sda.skeleton.posts;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import se.kth.sda.skeleton.comments.Comment;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Post {
@@ -13,7 +13,8 @@ public class Post {
     private String title;
     private String body;
     private String authorName;
-
+    @OneToMany(mappedBy = "owner")
+    private List<Comment> comments;
     public Post() {
     }
 
@@ -55,4 +56,11 @@ public class Post {
         return authorName;
     }
 
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 }
