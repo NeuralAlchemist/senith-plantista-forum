@@ -11,12 +11,11 @@ import javax.validation.Valid;
 
 @RestController
 public class CommentController{
-    CommentRepository commentRepository;
-    // Add below after PostRepository is up
-    /*PostRepository postRepository;*/
+    CommentService commentService;
+
     @Autowired
-    public CommentController(CommentRepository commentRepository) {
-        this.commentRepository = commentRepository;
+    public CommentController(CommentService commentService) {
+        this.commentService = commentService;
     }
 
     // Return all comments of a post
@@ -26,7 +25,7 @@ public class CommentController{
     // Return the given comment
     @GetMapping("/comments/{id}")
     public ResponseEntity<Comment> getComment(@PathVariable Long id){
-        Comment commentToGet = commentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
+        Comment commentToGet = commentService.getComment(id);
         return ResponseEntity.ok(commentToGet);
     }
 
@@ -34,17 +33,14 @@ public class CommentController{
     @DeleteMapping("/comments/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteComment(@PathVariable Long id){
-        Comment commentToBeDeleted = commentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
-        commentRepository.delete(commentToBeDeleted);
+        commentService.deleteComment(id);
     }
 
     // Update a given comment
     @PutMapping("/comments/{id}")
     public ResponseEntity<Comment> updateComment(@PathVariable Long id, @Valid @RequestBody Comment updatedComment){
-        commentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
-        updatedComment.setId(id);
-        commentRepository.save(updatedComment);
-        return ResponseEntity.ok(updatedComment);
+        Comment comment = commentService.updateComment(updatedComment, id);
+        return ResponseEntity.ok(comment);
     }
 
 }
