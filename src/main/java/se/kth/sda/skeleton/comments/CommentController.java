@@ -21,7 +21,11 @@ public class CommentController{
     // Return all comments of a post
 
     // Create a comment for a given post
-
+    @PostMapping("/posts/{postId}/comments")
+    public ResponseEntity<Comment> createComment(@PathVariable Long postId,@RequestBody Comment comment){
+        commentService.createComment(postId, comment);
+        return ResponseEntity.status(HttpStatus.CREATED).body(comment);
+    }
     // Return the given comment
     @GetMapping("/comments/{id}")
     public ResponseEntity<Comment> getComment(@PathVariable Long id){
