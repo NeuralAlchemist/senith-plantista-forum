@@ -1,11 +1,14 @@
 package se.kth.sda.skeleton.posts;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import se.kth.sda.skeleton.comments.Comment;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,7 +16,8 @@ public class Post {
     private String title;
     private String body;
     private String authorName;
-
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    private List<Comment> comments;
     public Post() {
     }
 
@@ -55,4 +59,11 @@ public class Post {
         return authorName;
     }
 
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 }
