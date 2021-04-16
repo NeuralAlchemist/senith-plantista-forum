@@ -1,10 +1,11 @@
 package se.kth.sda.skeleton.comments;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import se.kth.sda.skeleton.posts.Post;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Comment{
@@ -12,9 +13,11 @@ public class Comment{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String body;
-
-    /* Implement following during collab between post and comment
-    private Post Owner;*/
+    @ManyToOne
+    @JsonIgnore
+    @JoinColumn(nullable = false)
+    @NotNull
+    private Post owner;
 
     public String getBody() {
         return body;
@@ -31,5 +34,13 @@ public class Comment{
 
     public Long getId() {
         return id;
+    }
+
+    public Post getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Post owner) {
+        this.owner = owner;
     }
 }
