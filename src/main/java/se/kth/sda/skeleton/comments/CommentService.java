@@ -45,11 +45,11 @@ public class CommentService {
     }
 
     // Update the given comment
-    public Comment updateComment(Comment newComment, Long id){
+/*    public Comment updateComment(Comment newComment, Long id){
         Comment oldComment = commentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
         newComment.setId(oldComment.getId());
         newComment.setOwner(oldComment.getOwner());
         Comment updatedComment = commentRepository.save(newComment);
         return updatedComment;
-    }
+    }*/
 }
