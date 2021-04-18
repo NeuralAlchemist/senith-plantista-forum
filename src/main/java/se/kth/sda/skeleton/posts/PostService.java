@@ -3,8 +3,6 @@ package se.kth.sda.skeleton.posts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import se.kth.sda.skeleton.ResourceNotFoundException;
-import se.kth.sda.skeleton.posts.Post;
-import se.kth.sda.skeleton.posts.PostRepository;
 
 import java.util.List;
 
@@ -33,14 +31,8 @@ public class PostService {
 
     public Post updatePost(Post newPost, long id) {
         Post post = findPostById(id);
-        if (newPost.getTitle() != null) {
-            post.setTitle(newPost.getTitle());
-        }
         if (newPost.getBody() != null) {
             post.setBody(newPost.getBody());
-        }
-        if (newPost.getAuthorName() != null) {
-            post.setAuthorName(newPost.getAuthorName());
         }
         return postRepository.save(post);
     }
