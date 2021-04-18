@@ -4,10 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import se.kth.sda.skeleton.ResourceNotFoundException;
-import se.kth.sda.skeleton.posts.PostRepository;
 
-import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 public class CommentController{
@@ -19,9 +17,17 @@ public class CommentController{
     }
 
     // Return all comments of a post
-
+    @GetMapping("/posts/{postId}/comments")
+    public ResponseEntity<List<Comment>> getAllComments(@PathVariable Long postId){
+        List<Comment> allComments = commentService.getAllComments(postId);
+        return ResponseEntity.ok(allComments);
+    }
     // Create a comment for a given post
-
+    @PostMapping("/posts/{postId}/comments")
+    public ResponseEntity<Comment> createComment(@PathVariable Long postId,@RequestBody Comment comment){
+        commentService.createComment(postId, comment);
+        return ResponseEntity.status(HttpStatus.CREATED).body(comment);
+    }
     // Return the given comment
     @GetMapping("/comments/{id}")
     public ResponseEntity<Comment> getComment(@PathVariable Long id){
@@ -37,10 +43,10 @@ public class CommentController{
     }
 
     // Update a given comment
-    @PutMapping("/comments/{id}")
+ /*    @PutMapping("/comments/{id}")
     public ResponseEntity<Comment> updateComment(@PathVariable Long id, @Valid @RequestBody Comment updatedComment){
         Comment comment = commentService.updateComment(updatedComment, id);
         return ResponseEntity.ok(comment);
-    }
+    }*/
 
 }
