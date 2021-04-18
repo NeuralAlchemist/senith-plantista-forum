@@ -10,7 +10,7 @@ class CommentsApi {
     }
 
     createComment(postId, comment) {
-        return Api.comment('/posts/'+postId+'/comments', comment);
+        return Api.post('/posts/'+postId+'/comments', comment);
     }
 
     deleteComment(id) {
