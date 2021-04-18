@@ -1,21 +1,20 @@
 import React from "react";
 
-export default function CommentForm({ onSubmit }) {
+export default function CommentForm({ post, onSubmit }) {
     const [commentBody, setCommentBody] = React.useState("");
 
     const handleSubmit = () => {
         // Invoke the passed in event callback
-        onSubmit({ body: commentBody });
+        onSubmit(post.id,{ body: commentBody });
 
         // Clear the input field
         setCommentBody("");
     };
 
-    //Todo 1) connect ... a) as child component to PostCard and b) send info to Comment.jsx
     return (
         <div className="card">
             <div className="card-body">
-                <h4 className="card-title">Share your comment</h4>
+                <h5 className="card-title">Share your comment</h5>
                 <div>
                     <div className="form-group">
             <textarea
