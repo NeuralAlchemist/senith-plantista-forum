@@ -43,9 +43,9 @@ export default function PostCard({ post, onDeleteClick }) {
             .catch((err) => console.error(err));
     }, [setComments, postId]);
 
-    const updatePost = posts.map((post) => (
-        <PostUpdate key={post.id} post={post} onUpdatePost={onUpdatePost} />
-    ));
+    // const updatePost = posts.map((post) => (
+    //     <PostUpdate key={post.id} post={post} onUpdatePost={onUpdatePost} />
+    // ));
 
   return (
     <div className="card mt-3">
