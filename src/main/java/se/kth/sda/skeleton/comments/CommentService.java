@@ -16,8 +16,12 @@ public class CommentService {
     private CommentRepository commentRepository;
     private PostRepository postRepository;
 
+    /**
+     * Constructs a CommentService and automatically assigns its {@code postRepository} and {@code commentRepository} fields
+     * @param commentRepository an object that implements interface CommentRepository
+     * @param postRepository an object that implements interface PostRepository
+     */
     @Autowired
-
     public CommentService(CommentRepository commentRepository, PostRepository postRepository) {
         this.commentRepository = commentRepository;
         this.postRepository = postRepository;
@@ -68,13 +72,4 @@ public class CommentService {
         Comment commentToBeDeleted = commentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
         commentRepository.delete(commentToBeDeleted);
     }
-
-    // Update the given comment
-/*    public Comment updateComment(Comment newComment, Long id){
-        Comment oldComment = commentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
-        newComment.setId(oldComment.getId());
-        newComment.setOwner(oldComment.getOwner());
-        Comment updatedComment = commentRepository.save(newComment);
-        return updatedComment;
-    }*/
 }
