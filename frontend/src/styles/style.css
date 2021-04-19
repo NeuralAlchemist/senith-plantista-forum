@@ -4,6 +4,7 @@
 
 /* Components */
 @import url("./components/navigation.css");
+@import url("./components/update.css");
 @import url("./components/comments.css");
 @import url("./components/buttons.css");
 @import url("./components/links.css");
