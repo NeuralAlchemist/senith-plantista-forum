@@ -6,7 +6,6 @@ import CommentForm from "./comments/CommentForm";
 import CommentList from "./comments/CommentList";
 import CommentsApi from "../../api/CommentsApi";
 import PostUpdate from "./PostUpdate";
-import {Link} from "react-router-dom";
 
 export default function PostCard({ post, onDeleteClick }) {
     // Local state
@@ -18,9 +17,6 @@ export default function PostCard({ post, onDeleteClick }) {
     const postId = post.id;
 
     // Methods
-
-
-
     async function createComment(postId, commentData) {
         try {
             const response = await CommentsApi.createComment(postId, commentData);
@@ -48,10 +44,6 @@ export default function PostCard({ post, onDeleteClick }) {
             .catch((err) => console.error(err));
     }, [setComments, postId]);
 
-    // const updatePost = posts.map((post) => (
-    //     <PostUpdate key={post.id} post={post} onUpdatePost={onUpdatePost} />
-    // ));
-
   return (
     <div className="card mt-3">
       <div className="card-body">
@@ -63,12 +55,6 @@ export default function PostCard({ post, onDeleteClick }) {
 
           <PostUpdate onSubmite={(newBody)=>setPostBody(newBody)}
                       postId={post.id}/>
-
-          {/*<Link to={PostUpdate}>*/}
-          {/*    <button className="btn btn-danger">*/}
-          {/*        Update*/}
-          {/*    </button>*/}
-          {/*</Link>*/}
       </div>
 
         <CommentForm post={post} onSubmit={createComment}/>
