@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 import CommentForm from "./comments/CommentForm";
 import CommentList from "./comments/CommentList";
 import CommentsApi from "../../api/CommentsApi";
+import PostUpdate from "./PostUpdate";
+import {Link} from "react-router-dom";
 
 export default function PostCard({ post, onDeleteClick }) {
     // Local state
@@ -41,6 +43,10 @@ export default function PostCard({ post, onDeleteClick }) {
             .catch((err) => console.error(err));
     }, [setComments, postId]);
 
+    const updatePost = posts.map((post) => (
+        <PostUpdate key={post.id} post={post} onUpdatePost={onUpdatePost} />
+    ));
+
   return (
     <div className="card mt-3">
       <div className="card-body">
@@ -51,11 +57,13 @@ export default function PostCard({ post, onDeleteClick }) {
         </button>
 
 
+          {/*redirect to the UpdatePost component*/}
         {/* The text input for an updated Post should be here*/}
-        <button className="btn btn-danger" onClick={onUpdateClick}>
-          Update
-        </button>
-
+          <Link to={PostUpdate}>
+              <button className="btn btn-danger">
+                  Update
+              </button>
+          </Link>
       </div>
 
         <CommentForm post={post} onSubmit={createComment}/>
