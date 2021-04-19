@@ -14,6 +14,10 @@ import java.util.List;
 public class CommentController{
     CommentService commentService;
 
+    /**
+     * Constructs a PostController and automatically assigns its {@code commentService} field.
+     * @param commentService an object that implements interface CommentService
+     */
     @Autowired
     public CommentController(CommentService commentService) {
         this.commentService = commentService;
