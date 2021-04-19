@@ -52,7 +52,7 @@ public class CommentController{
 
     /**
      * Handler method for endpoint "/comments/{id}" with GET HttpRequest. Returns a {@link ResponseEntity} containing a Comment with the
-     * given {@code id}and HTTP status {@code OK}.
+     * given {@code id} and HTTP status {@code OK}.
      * @param id the id used to find the Comment associated with it
      * @return {@link ResponseEntity} containing a Comment with the given {@code id} and HTTP status {@code OK}
      */

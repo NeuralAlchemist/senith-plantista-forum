@@ -17,7 +17,7 @@ public class CommentService {
     private PostRepository postRepository;
 
     /**
-     * Constructs a CommentService and automatically assigns its {@code postRepository} and {@code commentRepository} fields
+     * Constructs a CommentService and automatically assigns its {@code postRepository} and {@code commentRepository} fields.
      * @param commentRepository an object that implements interface CommentRepository
      * @param postRepository an object that implements interface PostRepository
      */
@@ -30,7 +30,7 @@ public class CommentService {
     /**
      * Returns all Comments of a Post with the given{@code postId} or throws a {@link ResourceNotFoundException} if there is no
      * Post with the given {@code postId}.
-     * @param postId the Post who's entire list of Comments is returned
+     * @param postId the Post whose entire list of Comments is returned
      * @return a list of Comments of the Post with id equal to {@code postId}
      * @throws ResourceNotFoundException if there is no Post with the given {@code postId}
      */
@@ -53,7 +53,7 @@ public class CommentService {
 
     /**
      * Returns a Comment with the given {@code id} or throws a {@link ResourceNotFoundException} if there is no Comment with the given
-     * {@code id}
+     * {@code id}.
      * @param id the id used to find the Comment associated with it
      * @return Comment associated with the given {@code id}
      * @throws ResourceNotFoundException if there is no Comment with the given {@code id}
@@ -64,7 +64,7 @@ public class CommentService {
 
     /**
      * Deletes a Comment with the given {@code id} or throws a {@link ResourceNotFoundException} if there is no
-     * Comment with the given {@code id}
+     * Comment with the given {@code id}.
      * @param id the id used to find the Comment associated with it and delete it
      * @throws ResourceNotFoundException if there is no Comment with the given {@code id}
      */
