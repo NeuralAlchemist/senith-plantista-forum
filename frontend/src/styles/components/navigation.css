@@ -1,15 +1,15 @@
 .navbar {
-    background: #55A44E !important;
+    background: var(--color-green) !important;
 }
 
 .navbar-toggler {
-    background-color: #EDE9A3;
+    background-color: var(--color-yellow);
 }
 
 .navbar a {
-    color:  #EDE9A3 !important;
+    color:  var(--color-yellow) !important;
 }
 
 .navbar a:hover {
-    color:  #FFFFFF !important;
+    color:  var(--color-light-green) !important;
 }

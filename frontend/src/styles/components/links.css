@@ -1,10 +1,10 @@
 .card-body a {
-    color:  #4ea496;
+    color:  var(--color-info);
     text-decoration: underline;
 }
 
 .card-body  a:hover {
-    color:  #4ea496;
+    color:  var(--color-info);
     text-decoration: none;
 }
 

@@ -1,4 +1,4 @@
 body {
-    background: #EDE9A3;
-    color: #3A3042;
+    background: var(--color-yellow);
+    color: var(--color-text);
 }

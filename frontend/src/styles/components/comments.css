@@ -1,6 +1,6 @@
 .CommentForm {
     border: 0;
-    background-color: #EAF6EA;
+    background-color: var(--color-light-green);
 }
 
 .comment-submit {
@@ -9,9 +9,9 @@
 
 .Comment {
     border: 0;
-    margin: 0 16px 16px;
+    margin: 0 var(--space-medium) var(--space-medium);
 }
 
 .CommentList {
-    background-color: #EAF6EA;
+    background-color: var(--color-light-green);
 }
