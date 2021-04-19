@@ -9,7 +9,7 @@ import se.kth.sda.skeleton.posts.PostRepository;
 import java.util.List;
 
 /**
- * Represents the service layer. It contains defined functionalities according to business logic for comments.
+ * Represents the service layer. It contains defined functionalities according to business logic for Comments.
  */
 @Service
 public class CommentService {
@@ -24,10 +24,11 @@ public class CommentService {
     }
 
     /**
-     * Returns all comments of a post with the given{@code postId} or throws a {@link ResourceNotFoundException} if there is no post with the given {@code postId}.
-     * @param postId the post who's entire list of comments is returned
-     * @return a list of comments of the post with id equal to {@code postId}
-     * @throws ResourceNotFoundException if there is no post with the given {@code postId}
+     * Returns all Comments of a Post with the given{@code postId} or throws a {@link ResourceNotFoundException} if there is no
+     * Post with the given {@code postId}.
+     * @param postId the Post who's entire list of Comments is returned
+     * @return a list of Comments of the Post with id equal to {@code postId}
+     * @throws ResourceNotFoundException if there is no Post with the given {@code postId}
      */
     public List<Comment> getAllComments(Long postId){
         Post post = postRepository.findById(postId).orElseThrow(() -> new ResourceNotFoundException(postId));
@@ -35,10 +36,10 @@ public class CommentService {
     }
 
     /**
-     * Creates a comment for a post with the given {@code postId} or throws a {@link ResourceNotFoundException} if there is no post with the given {@code postId}.
-     * @param postId the post for whom a new comment is created
-     * @param comment the comment that will be associated with the post whose id is {@code postId}
-     * @throws ResourceNotFoundException if there is no post with the given {@code postId}
+     * Creates a Comment for a Post with the given {@code postId} or throws a {@link ResourceNotFoundException} if there is no Post with the given {@code postId}.
+     * @param postId the Post for whom a new Comment is created
+     * @param comment the Comment that will be associated with the Post whose id is {@code postId}
+     * @throws ResourceNotFoundException if there is no Post with the given {@code postId}
      */
     public void createComment(Long postId, Comment comment){
         Post post = postRepository.findById(postId).orElseThrow(() -> new ResourceNotFoundException(postId));
@@ -47,21 +48,21 @@ public class CommentService {
     }
 
     /**
-     * Returns a comment with the given {@code id} or throws a {@link ResourceNotFoundException} if there is no comment with the given
+     * Returns a Comment with the given {@code id} or throws a {@link ResourceNotFoundException} if there is no Comment with the given
      * {@code id}
-     * @param id the id used to find the comment associated with it
-     * @return comment associated with the given {@code id}
-     * @throws ResourceNotFoundException if there is no comment with the given {@code id}
+     * @param id the id used to find the Comment associated with it
+     * @return Comment associated with the given {@code id}
+     * @throws ResourceNotFoundException if there is no Comment with the given {@code id}
      */
     public Comment getComment(Long id){
         return commentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
     }
 
     /**
-     * Deletes a comment with the given {@code id} or throws a {@link ResourceNotFoundException} if there is no
-     * comment with the given {@code id}
-     * @param id the id used to find the comment associated with it and delete it
-     * @throws ResourceNotFoundException if there is no comment with the given {@code id}
+     * Deletes a Comment with the given {@code id} or throws a {@link ResourceNotFoundException} if there is no
+     * Comment with the given {@code id}
+     * @param id the id used to find the Comment associated with it and delete it
+     * @throws ResourceNotFoundException if there is no Comment with the given {@code id}
      */
     public void deleteComment(Long id){
         Comment commentToBeDeleted = commentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(id));
