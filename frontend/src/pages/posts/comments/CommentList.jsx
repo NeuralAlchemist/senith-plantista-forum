@@ -11,7 +11,7 @@ export default function CommentList({ comments, onDelete }) {
     ));
 
     return (
-        <div>
+        <div className="CommentList">
             {CommentsArray}
         </div>
     )

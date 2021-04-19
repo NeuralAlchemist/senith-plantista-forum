@@ -1,0 +1,17 @@
+.CommentForm {
+    border: 0;
+    background-color: var(--color-light-green);
+}
+
+.comment-submit {
+    margin: 0;
+}
+
+.Comment {
+    border: 0;
+    margin: 0 var(--space-medium) var(--space-medium);
+}
+
+.CommentList {
+    background-color: var(--color-light-green);
+}

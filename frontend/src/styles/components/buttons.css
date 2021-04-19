@@ -1,0 +1,23 @@
+.btn-outline-info {
+    border-color: var(--color-yellow);
+    color:  var(--color-yellow);
+}
+
+.btn-outline-info:hover {
+    border-color: var(--color-green);
+    color:  var(--color-green);
+    background-color: var(--color-yellow);
+}
+
+.btn-success {
+    background: var(--color-success);
+}
+
+.btn-danger {
+    background: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+.btn-info {
+    background: var(--color-info);
+}

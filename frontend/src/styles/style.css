@@ -1,46 +1,9 @@
-body {
-    background: #EDE9A3;
-    color: #3A3042;
-}
+/* Base */
+@import url("./base/variables.css");
+@import url("./base/base.css");
 
-/* Navigation */
-
-.navbar {
-    background: #55A44E !important;
-
-}
-
-.navbar-toggler {
-    background-color: #EDE9A3;
-}
-
-.navbar a {
-    color:  #EDE9A3 !important;
-}
-
-.navbar a:hover {
-    color:  #FFFFFF !important;
-}
-
-/* Links */
-
-a {
-    color:  #42803C;
-}
-
-a:hover {
-    color:  #55A44E;
-}
-
-/* Buttons */
-
-.btn-outline-info {
-    border-color: #EDE9A3;
-    color:  #EDE9A3;
-}
-
-.btn-outline-info:hover {
-    border-color: #55A44E;
-    color:  #55A44E;
-    background-color: #EDE9A3;
-}
+/* Components */
+@import url("./components/navigation.css");
+@import url("./components/comments.css");
+@import url("./components/buttons.css");
+@import url("./components/links.css");

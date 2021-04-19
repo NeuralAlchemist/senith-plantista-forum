@@ -1,0 +1,10 @@
+.card-body a {
+    color:  var(--color-info);
+    text-decoration: underline;
+}
+
+.card-body  a:hover {
+    color:  var(--color-info);
+    text-decoration: none;
+}
+
