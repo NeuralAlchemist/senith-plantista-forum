@@ -14,6 +14,10 @@ public class PostService {
 
     private final PostRepository postRepository;
 
+    /**
+     * Constructs a PostService and automatically assigns its {@code postRepository} field
+     * @param postRepository an object that implements interface PostRepository
+     */
     @Autowired
     public PostService(PostRepository postRepository) {
         this.postRepository = postRepository;

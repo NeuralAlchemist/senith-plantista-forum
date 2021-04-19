@@ -12,6 +12,10 @@ import java.util.List;
 public class PostController{
     private final PostService postService;
 
+    /**
+     * Constructs a PostController and automatically assigns its {@code postService} field.
+     * @param postService an object that implements interface PostService
+     */
     @Autowired
     public PostController(PostService postService) {
         this.postService = postService;

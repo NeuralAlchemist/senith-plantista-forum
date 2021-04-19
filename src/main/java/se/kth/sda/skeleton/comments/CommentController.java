@@ -14,6 +14,10 @@ import java.util.List;
 public class CommentController{
     CommentService commentService;
 
+    /**
+     * Constructs a PostController and automatically assigns its {@code commentService} field.
+     * @param commentService an object that implements interface CommentService
+     */
     @Autowired
     public CommentController(CommentService commentService) {
         this.commentService = commentService;
@@ -68,12 +72,5 @@ public class CommentController{
     public void deleteComment(@PathVariable Long id){
         commentService.deleteComment(id);
     }
-
-    // Update a given comment
- /*    @PutMapping("/comments/{id}")
-    public ResponseEntity<Comment> updateComment(@PathVariable Long id, @Valid @RequestBody Comment updatedComment){
-        Comment comment = commentService.updateComment(updatedComment, id);
-        return ResponseEntity.ok(comment);
-    }*/
 
 }
