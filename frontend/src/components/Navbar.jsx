@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo-text.png"
+import logoLeaf from "../images/logo-leaf.png";
+import logoText from "../images/logo-text.png";
 
 export default function Navbar({ onLogout }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
       <Link className="navbar-brand" to="/">
-        <img src={logo} alt="Plantista logo" title="Plantista logo" />
+        <img src={logoLeaf} alt="Plantista leaf icon" title="Plantista logo" className="d-block d-sm-none"/>
+        <img src={logoText} alt="Plantista logo text" title="Plantista logo" className="d-none d-sm-block"/>
       </Link>
       <button
         className="navbar-toggler"
