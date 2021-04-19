@@ -1,15 +1,11 @@
 import React from "react";
 
-import PostCard from "./Card";
-import Card from "./Card";
-import {Link} from "react-router-dom";
 import PostsApi from "../../api/PostsApi";
 
 export default function PostUpdate ({postId}) {
     const [body, setBody] = React.useState("");
 
     //fetch the post from API
-
     const post = PostsApi.getPostById(postId);
     console.log(post);
     setBody(post.data);
@@ -22,6 +18,7 @@ export default function PostUpdate ({postId}) {
                 this.props.history.push("/posts");
             }
         }
+        // to be updated
         catch (err){};
     }
 
