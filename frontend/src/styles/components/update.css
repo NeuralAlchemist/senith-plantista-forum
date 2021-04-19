@@ -1,0 +1,5 @@
+.PostUpdate {
+    border: 0;
+    background-color: var(--color-info-light);
+    margin-top: var(--space-medium);
+}

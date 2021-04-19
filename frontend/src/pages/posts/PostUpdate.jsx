@@ -32,9 +32,9 @@ export default function PostUpdate ({onSubmite, postId}) {
     }
 
     return (
-        <div className="card">
+        <div className="card PostUpdate">
             <div className="card-body">
-                <h4 className="card-title">Update post</h4>
+                <h5 className="card-title">Update post</h5>
                 <div>
                     <div className="form-group">
             <textarea
@@ -44,9 +44,8 @@ export default function PostUpdate ({onSubmite, postId}) {
                     </div>
 
                     <div className="form-group">
-
-                            <button className="btn btn-success" onClick={updatePost}>
-                                Update the post
+                            <button className="btn btn-info" onClick={updatePost}>
+                                Update
                             </button>
                     </div>
                 </div>
