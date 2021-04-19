@@ -15,7 +15,7 @@ public class CommentController{
     CommentService commentService;
 
     /**
-     * Constructs a PostController and automatically assigns its {@code commentService} field.
+     * Constructs a CommentController and automatically assigns its {@code commentService} field.
      * @param commentService an object that implements interface CommentService
      */
     @Autowired
@@ -26,7 +26,7 @@ public class CommentController{
     /**
      * Handler method for endpoint "/posts/{postId}/comments" with GET HttpRequest. Returns a {@link ResponseEntity}
      * containing the list of Comments associated with a Post of the given {@code postId} and HTTP status {@code OK}.
-     * @param postId the Post who's entire list of Comments is returned
+     * @param postId the Post whose entire list of Comments is returned
      * @return {@link ResponseEntity} containing the list of Comments associated with a Post of the given {@code postId}
      * and HTTP status {@code OK}
      */
