@@ -73,11 +73,4 @@ public class CommentController{
         commentService.deleteComment(id);
     }
 
-    // Update a given comment
- /*    @PutMapping("/comments/{id}")
-    public ResponseEntity<Comment> updateComment(@PathVariable Long id, @Valid @RequestBody Comment updatedComment){
-        Comment comment = commentService.updateComment(updatedComment, id);
-        return ResponseEntity.ok(comment);
-    }*/
-
 }
