@@ -27,9 +27,10 @@ export default function PostsPage() {
   async function deletePost(post) {
     try {
       await PostsApi.deletePost(post.id);
-      const newPosts = posts.filter((p) => p.id !== post.id);
+      const response = await PostsApi.getAllPosts()
+      setPosts(response.data);
 
-      setPosts(newPosts);
+      //setPosts(newPosts);
     } catch (e) {
       console.error(e);
     }
@@ -40,14 +41,15 @@ export default function PostsPage() {
     PostsApi.getAllPosts()
       .then(({ data }) => setPosts(data))
       .catch((err) => console.error(err));
-  }, [setPosts]);
+  }, []);
 
   // Components
-  const CardsArray = posts.map((post) => (
+  const CardsArray = posts? posts.map((post) => (
     <Card key={post.id} post={post} onDeleteClick={() => deletePost(post)}/>
-  ));
+  )): null;
 
   return (
+
     <div>
       <Form onSubmit={(postData) => createPost(postData)} />
 

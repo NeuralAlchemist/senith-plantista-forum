@@ -11,11 +11,16 @@ import {Link} from "react-router-dom";
 export default function PostCard({ post, onDeleteClick }) {
     // Local state
     const [comments, setComments] = useState([]);
+    const [showForm, setShowForm] = useState(false);
+    const[postBody, setPostBody] = useState(post.body);
 
     // Components
     const postId = post.id;
 
     // Methods
+
+
+
     async function createComment(postId, commentData) {
         try {
             const response = await CommentsApi.createComment(postId, commentData);
@@ -50,20 +55,20 @@ export default function PostCard({ post, onDeleteClick }) {
   return (
     <div className="card mt-3">
       <div className="card-body">
-        <p>{post.body}</p>
+        <p>{postBody}</p>
 
         <button className="btn btn-danger" onClick={onDeleteClick}>
           Delete
         </button>
 
+          <PostUpdate onSubmite={(newBody)=>setPostBody(newBody)}
+                      postId={post.id}/>
 
-          {/*redirect to the UpdatePost component*/}
-        {/* The text input for an updated Post should be here*/}
-          <Link to={PostUpdate}>
-              <button className="btn btn-danger">
-                  Update
-              </button>
-          </Link>
+          {/*<Link to={PostUpdate}>*/}
+          {/*    <button className="btn btn-danger">*/}
+          {/*        Update*/}
+          {/*    </button>*/}
+          {/*</Link>*/}
       </div>
 
         <CommentForm post={post} onSubmit={createComment}/>

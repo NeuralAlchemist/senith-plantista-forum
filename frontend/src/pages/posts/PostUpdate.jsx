@@ -1,22 +1,28 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import PostsApi from "../../api/PostsApi";
 
-export default function PostUpdate ({postId}) {
+export default function PostUpdate ({onSubmite, postId}) {
     const [body, setBody] = React.useState("");
 
-    //fetch the post from API
-    const post = PostsApi.getPostById(postId);
-    console.log(post);
-    setBody(post.data);
+    useEffect(async ()=>{
+        const post = await PostsApi.getPostById(postId);
+        console.log(post);
+        setBody(post.data);},[])
+
     // todo: test
-    async function updatePost(post) {
+    async function updatePost() {
         try {
-            post.body = body;
-            const response = await PostsApi.updatePost(post);
+            const post = {body: body};
+            const response = await PostsApi.updatePost(post, postId);
+            PostsApi.getPostById(postId)
+                .then(response=>onSubmite(response.body))
+                .catch(error=>console.log(error))
             if (response.status == 200) {
                 this.props.history.push("/posts");
             }
+
+
         }
         // to be updated
         catch (err){};
@@ -30,7 +36,6 @@ export default function PostUpdate ({postId}) {
                     <div className="form-group">
             <textarea
                 className="form-control"
-                value={body}
                 onChange={(e) => setBody(e.target.value)}
             />
                     </div>

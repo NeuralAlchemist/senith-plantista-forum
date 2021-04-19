@@ -6,15 +6,15 @@ class PostsApi {
     }
 
     getPostById(id) {
-        return Api.get('/posts/'+id);
+        return Api.get('/posts/'+id).then(response=>response.data);
     }
 
     createPost(post) {
         return Api.post('/posts', post);
     }
 
-    updatePost(post) {
-        return Api.put('/posts', post);
+    updatePost(post,id) {
+        return Api.put('/posts/'+id, post);
     }
 
     deletePost(id) {

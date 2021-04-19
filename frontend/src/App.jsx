@@ -29,10 +29,10 @@ export default function App() {
             <PostsPage />
           </Route>
 
-         {/* Todo: redirect to the post to be updated - find the syntax*/}
-          <Route path="/posts/:id/edit">
-            <PostUpdate />
-          </Route>
+         {/*/!* Todo: redirect to the post to be updated - find the syntax*!/*/}
+         {/* <Route path="/posts/:id/edit">*/}
+         {/*   <PostUpdate />*/}
+         {/* </Route>*/}
 
           <Route path="/">
             <HomePage />
