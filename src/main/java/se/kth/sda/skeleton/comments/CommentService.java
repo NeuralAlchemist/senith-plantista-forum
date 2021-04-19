@@ -28,7 +28,7 @@ public class CommentService {
     }
 
     /**
-     * Returns all Comments of a Post with the given{@code postId} or throws a {@link ResourceNotFoundException} if there is no
+     * Returns all Comments of a Post with the given {@code postId} or throws a {@link ResourceNotFoundException} if there is no
      * Post with the given {@code postId}.
      * @param postId the Post whose entire list of Comments is returned
      * @return a list of Comments of the Post with id equal to {@code postId}
