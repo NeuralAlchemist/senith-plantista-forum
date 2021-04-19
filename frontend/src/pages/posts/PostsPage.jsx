@@ -7,49 +7,53 @@ import Form from "./Form";
 import Card from "./Card";
 
 export default function PostsPage() {
-  // Local state
-  const [posts, setPosts] = useState([]);
+    // Local state
+    const [posts, setPosts] = useState([]);
 
-  // Methods
-  async function createPost(postData) {
-    try {
-      const response = await PostsApi.createPost(postData);
-      const post = response.data;
-      const newPosts = posts.concat(post);
-
-      setPosts(newPosts);
-    } catch (e) {
-      console.error(e);
+    // Methods
+    async function createPost(postData) {
+        try {
+            const response = await PostsApi.createPost(postData);
+            const post = response.data;
+            // filter for the id and change all values to the new
+            const newPosts = posts.concat(post);
+            setPosts(newPosts);
+        } catch (e) {
+            console.error(e);
+        }
     }
-  }
 
-  async function deletePost(post) {
-    try {
-      await PostsApi.deletePost(post.id);
-      const newPosts = posts.filter((p) => p.id !== post.id);
-
-      setPosts(newPosts);
-    } catch (e) {
-      console.error(e);
+    async function deletePost(post) {
+        try {
+            const temp = await PostsApi.deletePost(post.id);
+            const response = await PostsApi.getAllPosts();
+            setPosts(response.data);
+        } catch (e) {
+            console.error(e);
+        }
     }
-  }
 
-  useEffect(() => {
-    PostsApi.getAllPosts()
-      .then(({ data }) => setPosts(data))
-      .catch((err) => console.error(err));
-  }, [setPosts]);
+    useEffect(() => {
+        PostsApi.getAllPosts()
+            .then(({ data }) => setPosts(data))
+            .catch((err) => console.error(err));
+    }, []);
 
-  // Components
-  const CardsArray = posts.map((post) => (
-    <Card key={post.id} post={post} onDeleteClick={() => deletePost(post)} />
-  ));
+    // Components
+    const CardsArray = posts
+        ? posts.map((post) => (
+              <Card
+                  key={post.id}
+                  post={post}
+                  onDeleteClick={() => deletePost(post)}
+              />
+          ))
+        : null;
 
-  return (
-    <div>
-      <Form onSubmit={(postData) => createPost(postData)} />
-
-      {CardsArray}
-    </div>
-  );
+    return (
+        <div>
+            <Form onSubmit={(postData) => createPost(postData)} />
+            {CardsArray}
+        </div>
+    );
 }

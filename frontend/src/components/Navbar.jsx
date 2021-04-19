@@ -36,11 +36,6 @@ export default function Navbar({ onLogout }) {
             </Link>
           </li>
 
-          <li className="nav-item">
-            <Link to="/chat" className="nav-link">
-              Chat
-            </Link>
-          </li>
         </ul>
 
         <button

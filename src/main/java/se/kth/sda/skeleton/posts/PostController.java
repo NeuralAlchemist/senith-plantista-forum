@@ -47,8 +47,8 @@ public class PostController{
      * @return
      */
     @PostMapping("/posts")
-    public Post addPost(@RequestBody Post article) {
-        return postService.addPost(article);
+    public Post addPost(@RequestBody Post newPost) {
+        return postService.addPost(newPost);
     }
 
     /**

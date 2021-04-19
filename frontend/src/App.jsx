@@ -8,8 +8,8 @@ import Navbar from "./components/Navbar";
 import AuthPage from "./pages/auth/AuthPage";
 import HomePage from "./pages/home/HomePage";
 import PostsPage from "./pages/posts/PostsPage";
-import ChatPage from "./pages/chat/ChatPage";
 import "./App.css";
+import PostUpdate from "./pages/posts/PostUpdate";
 
 export default function App() {
   // State
@@ -29,9 +29,10 @@ export default function App() {
             <PostsPage />
           </Route>
 
-          <Route path="/chat">
-            <ChatPage />
-          </Route>
+         {/*/!* Todo: redirect to the post to be updated - find the syntax*!/*/}
+         {/* <Route path="/posts/:id/edit">*/}
+         {/*   <PostUpdate />*/}
+         {/* </Route>*/}
 
           <Route path="/">
             <HomePage />
