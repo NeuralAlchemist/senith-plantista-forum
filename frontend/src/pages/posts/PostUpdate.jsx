@@ -44,7 +44,6 @@ export default function PostUpdate ({onSubmite, postId}) {
                     </div>
 
                     <div className="form-group">
-
                             <button className="btn btn-info" onClick={updatePost}>
                                 Update
                             </button>
