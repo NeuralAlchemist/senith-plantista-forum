@@ -29,10 +29,6 @@ export default function App() {
             <PostsPage />
           </Route>
 
-          <Route path="/chat">
-            <ChatPage />
-          </Route>
-
           <Route path="/">
             <HomePage />
           </Route>

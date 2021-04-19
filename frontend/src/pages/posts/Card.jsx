@@ -49,6 +49,13 @@ export default function PostCard({ post, onDeleteClick }) {
         <button className="btn btn-danger" onClick={onDeleteClick}>
           Delete
         </button>
+
+
+        {/* The text input for an updated Post should be here*/}
+        <button className="btn btn-danger" onClick={onUpdateClick}>
+          Update
+        </button>
+
       </div>
 
         <CommentForm post={post} onSubmit={createComment}/>
