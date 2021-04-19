@@ -1,0 +1,23 @@
+.btn-outline-info {
+    border-color: #EDE9A3;
+    color:  #EDE9A3;
+}
+
+.btn-outline-info:hover {
+    border-color: #55A44E;
+    color:  #55A44E;
+    background-color: #EDE9A3;
+}
+
+.btn-success {
+    background: #55A44E;
+}
+
+.btn-danger {
+    background: #a44e55;
+    border-color: #a44e55;
+}
+
+.btn-info {
+    background: #4ea496;
+}

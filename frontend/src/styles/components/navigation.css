@@ -1,0 +1,15 @@
+.navbar {
+    background: #55A44E !important;
+}
+
+.navbar-toggler {
+    background-color: #EDE9A3;
+}
+
+.navbar a {
+    color:  #EDE9A3 !important;
+}
+
+.navbar a:hover {
+    color:  #FFFFFF !important;
+}
