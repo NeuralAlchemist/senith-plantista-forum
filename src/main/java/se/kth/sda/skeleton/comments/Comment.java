@@ -3,17 +3,16 @@ package se.kth.sda.skeleton.comments;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import se.kth.sda.skeleton.posts.Post;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 /**
  * Represents a comment on a {@link Post} as a JPA Entity. This implementation of comment will autogenerate a primary key of type
  * {@link Long} to indicate the current Comment entity. A Comment has a non-null field called {@code owner}. The {@code owner}
- * is a {@link Post} to which the Comment is related. The body of a {@code Comment} can be null.
+ * is a {@link Post} to which the Comment is related. The body of a {@code Comment} can be null. Comment shares a many to one
+ * ORM relationship with Post class.
  */
 
 @Entity
