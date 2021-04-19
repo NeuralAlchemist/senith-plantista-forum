@@ -5,11 +5,14 @@ import PostsApi from "../../api/PostsApi";
 export default function PostUpdate ({onSubmite, postId}) {
     const [body, setBody] = React.useState("");
 
-    useEffect(async ()=>{
-        const post = await PostsApi.getPostById(postId);
-        console.log(post);
-        setBody(post.data);},[])
+    useEffect(() => {
+        (async ()=> {
+            const post = await PostsApi.getPostById(postId);
+            setBody(post.data); 
+        })();
+    },[]);
 
+        
     // todo: test
     async function updatePost() {
         try {
