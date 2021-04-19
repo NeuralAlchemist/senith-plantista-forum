@@ -44,3 +44,22 @@ a:hover {
     color:  #55A44E;
     background-color: #EDE9A3;
 }
+
+/* Comment Form */
+.CommentForm {
+    border: 0;
+    background-color: #EAF6EA;
+}
+
+.comment-submit {
+    margin: 0;
+}
+
+.Comment {
+    border: 0;
+    margin: 0 16px 16px;
+}
+
+.CommentList {
+    background-color: #EAF6EA;
+}

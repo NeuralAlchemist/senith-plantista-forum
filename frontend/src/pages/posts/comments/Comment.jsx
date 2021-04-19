@@ -7,7 +7,7 @@ export default function Comment({ comment, onDeleteClick }) {
         onDeleteClick(comment);
     };
     return (
-        <div className="card mt-3">
+        <div className="card mt-3 Comment">
             <div className="card-body">
                 <p>{comment.body}</p>
 

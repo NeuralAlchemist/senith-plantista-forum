@@ -12,7 +12,7 @@ export default function CommentForm({ post, onSubmit }) {
     };
 
     return (
-        <div className="card">
+        <div className="card CommentForm">
             <div className="card-body">
                 <h5 className="card-title">Share your comment</h5>
                 <div>
@@ -24,7 +24,7 @@ export default function CommentForm({ post, onSubmit }) {
             />
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group comment-submit">
                         <button className="btn btn-success" onClick={handleSubmit}>
                             Post
                         </button>
