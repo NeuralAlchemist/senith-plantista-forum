@@ -34,6 +34,26 @@ export default function PostsPage() {
     }
   }
 
+  // todo: test
+  async function updatePost(post) {
+    try {
+      await PostsApi.updatePost(post.id);
+
+
+      // Component
+      // Click "update" button, you want to (button in Card.jsx)
+
+      //    fetch post (and respective text) to be updated
+      //    display active text input box that allows user input
+            // i understand this should be in the Card.jsx
+      // save new input to the same post fetched. (Api)
+      // display the post as normal
+
+      // current post, updated post
+      // save the updated post in the current post.id (is this what the API does?)
+    }
+  }
+
   useEffect(() => {
     PostsApi.getAllPosts()
       .then(({ data }) => setPosts(data))
